@@ -8,7 +8,7 @@ function App() {
 
   const [file, setFile] = useState("");
   const [response, setResponse] = useState("");
-  const [loading,setLoading] = useState(false);
+  const [loading, setLoading] = useState(false);
 
   const fileChangeHandler = (e) => {
     setFile(e.target.files[0]);
@@ -36,6 +36,11 @@ function App() {
     setLoading(false);
   }
 
+
+  const copyToClipboard=()=>{
+    navigator.clipboard.writeText(response);
+  }
+
   // console.log(file);
 
   return (
@@ -55,15 +60,18 @@ function App() {
         <input type="file" className="input-tag" ref={fileInputRef} onChange={fileChangeHandler} />
 
         <div className="mt-4">
-          
+
           {!loading ? (
-        <div>
-           <a href={response} rel="noopener">{response}</a>
-        </div>
-      ) : (
-        SpinnerLoading()
-      )}
-          
+            <div>
+              <a href={response} rel="noopener">{response}</a>
+              <button className="btn btn-secondary btn-sm mt-4" onClick={copyToClipboard}>
+                Copy to clipboard
+              </button>
+            </div>
+          ) : (
+            SpinnerLoading()
+          )}
+
         </div>
       </div>
     </div>
