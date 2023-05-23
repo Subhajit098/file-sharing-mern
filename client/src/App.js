@@ -41,7 +41,7 @@ function App() {
     navigator.clipboard.writeText(response);
   }
 
-  // console.log(file);
+  console.log(file);
 
   return (
 
@@ -64,7 +64,7 @@ function App() {
           {!loading ? (
             <div>
               <a href={response} rel="noopener">{response}</a>
-              <button className="btn btn-secondary btn-sm mt-4" onClick={copyToClipboard}>
+              <button className="btn btn-secondary btn-sm mt-4 mx-auto d-block" onClick={copyToClipboard}>
                 Copy to clipboard
               </button>
             </div>
