@@ -56,7 +56,7 @@ function App() {
           <p>Type of the file: {file.type}</p>
         </div>
 
-        <button type="button" onClick={OnUploadClick} className="btn btn-primary mt-3">Upload</button>
+        <button type="button" onClick={OnUploadClick} className="btn btn-primary mt-3 border border-dark">Upload</button>
         <input type="file" className="input-tag" ref={fileInputRef} onChange={fileChangeHandler} />
 
         <div className="mt-4">
@@ -64,7 +64,7 @@ function App() {
           {!loading ? (
             <div>
               <a href={response} rel="noopener">{response}</a>
-              <button className="btn btn-secondary btn-sm mt-4 mx-auto d-block" onClick={copyToClipboard}>
+              <button className="btn btn-secondary btn-sm mt-4 mx-auto d-block border border-dark" onClick={copyToClipboard}>
                 Copy to clipboard
               </button>
             </div>
