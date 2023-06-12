@@ -1,7 +1,7 @@
 import axios from "axios";
 
-// const URL = "http://localhost:5000";
-const URL = "https://file-sharing-mern-gzab.onrender.com";
+const URL = "http://localhost:5000";
+
 
 export const uploadFile= async(data)=>{
     try{
