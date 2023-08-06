@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const URL = "http://localhost:5000";
+// Replaced the server link with the vercel backend link
+const URL = "http://localhost:5000" || "https://file-sharing-mern-webapp.vercel.app/";
 
 
 export const uploadFile= async(data)=>{
