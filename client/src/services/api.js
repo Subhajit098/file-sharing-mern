@@ -3,7 +3,7 @@ import * as dotenv from 'dotenv';
 dotenv.config();
 // Replaced the server link with the vercel backend link
 // "http://localhost:5000" |
-const URL = process.env.BACKEND_URL;
+const URL = "http://localhost:5000";
 
 
 export const uploadFile= async(data)=>{
