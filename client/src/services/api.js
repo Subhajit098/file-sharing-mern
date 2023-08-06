@@ -1,8 +1,9 @@
 import axios from "axios";
-
+import * as dotenv from 'dotenv';
+dotenv.config();
 // Replaced the server link with the vercel backend link
-// "http://localhost:5000" ||
-const URL =  "https://file-sharing-mern-webapp.vercel.app/";
+// "http://localhost:5000" |
+const URL = process.env.BACKEND_URL;
 
 
 export const uploadFile= async(data)=>{
