@@ -6,6 +6,7 @@ import upload from "../middlewares/upload.js";
 const router = express.Router();
 
 router.post("/upload",upload.single("file"),uploadImage);
+//  endpoint,middleware,callback function
 router.get("/files/:Id",downLoadContent);
 
 export default router;

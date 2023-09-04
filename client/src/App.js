@@ -11,17 +11,23 @@ function App() {
   const [loading, setLoading] = useState(false);
 
   const fileChangeHandler = (e) => {
+    // const fileInfo = e.target.files[0];
+    // contains all the info regarding the particular file 
     setFile(e.target.files[0]);
+    // console.log(fileInfo)
   }
+  //  As we can choose multiple files from the input, we need to choose only the single file
 
   const fileInputRef = useRef();
 
   useEffect(() => {
+    // calling the api getImage function upon change in the file 
     const getImage = async () => {
       if (file) {
         const data = new FormData();
         data.append("name", file.name);
         data.append("file", file);
+        // file is transferred in the binary format
         setLoading(true);
         let response = await uploadFile(data);
         setResponse(response.path);

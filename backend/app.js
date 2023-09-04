@@ -6,6 +6,7 @@ import dbConnection from "./database/db.js";
 const app = express();
 
 app.use(cors());
+// cross origin resource sharing. This happens because our two servers for the frontend and backend is running on both diff ports and we are not allowed to share data b/w them. This package helps us to remove the conflict error.
 
 app.use(
     express.urlencoded({ extended: true })
