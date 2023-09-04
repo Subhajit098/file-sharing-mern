@@ -47,7 +47,7 @@ function App() {
 
     <div className="container box-margin">
       <div className="text-center align-center">
-        <h2 className="mt-3">Simple MERN app for file Shairng</h2>
+        <h2 className="mt-3">Convinent File Shairng without registration in one single step</h2>
         <p>Press the Upload button below to share your download link</p>
 
         <div>
