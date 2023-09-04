@@ -1,4 +1,6 @@
 import File from "../models/file.js";
+import * as dotenv from 'dotenv';
+dotenv.config();
 
 
 export const uploadImage= async(req,res) =>{
@@ -9,7 +11,7 @@ export const uploadImage= async(req,res) =>{
     try{
        const file = await File.create(fileObj);
        console.log(file);
-       res.status(200).json({path:`http://localhost:5000/files/${file._id}`})
+       res.status(200).json({path:`http://localhost:5000/${file._id}`})
     }
     catch(err){
         console.log("Error: 1",err.message);

@@ -1,5 +1,8 @@
 import axios from "axios";
-
+import * as dotenv from 'dotenv';
+dotenv.config();
+// Replaced the server link with the vercel backend link
+// "http://localhost:5000" |
 const URL = "http://localhost:5000";
 
 
